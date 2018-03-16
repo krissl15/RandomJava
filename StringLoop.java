@@ -15,21 +15,22 @@ public class StringLoop {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        StringLoop kuk = new StringLoop();
-        kuk.looper();
+        StringLoop sL = new StringLoop();
+        String k = "heisann Sveisann";
+        sL.looper(k);
     }
 
     /**
      * @return the first recurring character
      */
-    public String looper() {
-        String s = "bcaa";
+    public String looper(String s) {
         String rebound = "";
         HashMap<String, Integer> m = new HashMap<>();
         for (String c : s.split("")) {
             if (m.containsKey(c)) {
                 rebound = c;
                 System.out.println(c);
+                break;
             } else {
                 m.put(c, 1);
             }
